@@ -36,7 +36,7 @@ const DATA = [
 ];
 
 
-const App11 = () => {
+const Home = () => {
 
 
   return (
@@ -94,4 +94,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default App11;
+export default Home;

@@ -4,7 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack'
 import BoldAndBeautiful from './App7';
-import App11 from './App9';
+import Home from './Home';
 
 
 function CustomHeader({ title }) {
@@ -27,7 +27,7 @@ function HomeScreen() {
       <SafeAreaView style={{ flex: 1 }}>
         <CustomHeader title="Home" />
 
-        <App11></App11>
+        <Home></Home>
 
       </SafeAreaView></ImageBackground>
   );
