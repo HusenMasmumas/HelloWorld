@@ -4,16 +4,10 @@ import {
   SafeAreaView,
   StyleSheet,
   ScrollView,
-  View,
   Text,
-  StatusBar,
-  FlatList,
-  Platform,
-  Image,
-  ImageBackground,
 } from 'react-native';
 
-class BoldAndBeautiful extends Component {
+class Home1 extends Component {
 
   render() {
     return (
@@ -69,6 +63,14 @@ class BoldAndBeautiful extends Component {
 
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  scrollView: {
+    backgroundColor: 'rgba(100, 100, 100, 0.8)',
+    marginHorizontal: 15,
+    borderRadius: 20,
+  },
   baseText: {
     fontWeight: 'bold',
     paddingVertical: 20,
@@ -78,18 +80,7 @@ const styles = StyleSheet.create({
   innerText: {
     color: 'red'
   },
-  container: {
-    flex: 1,
 
-  },
-  scrollView: {
-    backgroundColor: 'rgba(100, 100, 100, 0.8)',
-    marginHorizontal: 15,
-    borderRadius: 20,
-  },
-  text: {
-    fontSize: 42,
-  },
 });
 
-export default BoldAndBeautiful;
+export default Home1;

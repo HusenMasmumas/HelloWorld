@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { SafeAreaView, View, FlatList, StyleSheet, Text, StatusBar, Image } from 'react-native';
 
 const DATA = [
@@ -38,8 +38,9 @@ const DATA = [
 
 const Home = () => {
 
-
+  console.disableYellowBox = true;
   return (
+
     <SafeAreaView style={styles.container}>
       <View>
 
@@ -50,12 +51,12 @@ const Home = () => {
 
 
             <View style={styles.cardStyle} >
-              <Image source={item.photo} style={{ width: '100%', height: 200 }} />
-              <View style={{ flexDirection: 'row', margin: 16 }}>
+              <Image source={item.photo} style={styles.images} />
+              <View style={styles.view}>
 
-                <View style={{ flexDirection: 'column', marginLeft: 16 }}>
-                  <Text style={{ color: "#FFFFFFEE", fontSize: 18, margin: 2, marginLeft: 10 }} > {item.name}</Text>
-                  <Text style={{ color: "#CDCDCDEE" }} >ผู้ชม {item.view} View</Text>
+                <View style={styles.framein}>
+                  <Text style={styles.top} > {item.name}</Text>
+                  <Text style={styles.lower} >ผู้ชม {item.view} View</Text>
 
                 </View>
               </View>
@@ -70,18 +71,10 @@ const Home = () => {
 }
 
 const styles = StyleSheet.create({
-  container: {
+  container: 
+  {
     flex: 1,
     marginTop: StatusBar.currentHeight || 0,
-  },
-  item: {
-    backgroundColor: '#f9c2ff',
-    padding: 20,
-    marginVertical: 8,
-    marginHorizontal: 16,
-  },
-  title: {
-    fontSize: 32,
   },
   cardStyle:
   {
@@ -91,7 +84,34 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     borderRadius: 20,
     margin: 20
-  }
+  },
+  images:
+  {
+    width: '100%',
+    height: 200,
+  },
+  view:
+  {
+    flexDirection: 'row',
+    margin: 16,
+  },
+  framein:
+  {
+    flexDirection: 'column',
+    marginLeft: 16,
+  },
+  top:
+  {
+    color: "#FFFFFFEE",
+    fontSize: 18,
+    margin: 2,
+    marginLeft: 10,
+  },
+  lower:
+  {
+    color: "#CDCDCDEE",
+  },
+
 });
 
 export default Home;
