@@ -3,7 +3,7 @@ import { SafeAreaView, Text, View, Image, ImageBackground } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack'
-import BoldAndBeautiful from './App6';
+import BoldAndBeautiful from './App7';
 import App11 from './App9';
 
 
@@ -25,7 +25,7 @@ function HomeScreen() {
 
     <ImageBackground style={{ width: '100%', height: '100%' }} source={require('./src/images/1.jpeg')} >
       <SafeAreaView style={{ flex: 1 }}>
-        <CustomHeader title="setting" />
+        <CustomHeader title="Home" />
 
         <App11></App11>
 
@@ -35,11 +35,11 @@ function HomeScreen() {
 
 
 
-function SettingsScreen() {
+function InformationScreen() {
   return (
     <ImageBackground style={{ width: '100%', height: '100%' }} source={require('./src/images/1.jpeg')} >
       <SafeAreaView style={{ flex: 1 }}>
-        <CustomHeader title="Home" />
+        <CustomHeader title="Information" />
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }} >
 
           <BoldAndBeautiful></BoldAndBeautiful>
@@ -67,10 +67,10 @@ function HomeStack() {
   )
 }
 
-function SettingStack() {
+function InformationStack() {
   return (
-    <Stack.Navigator initialRouteName="Setting">
-      <Stack.Screen name="Setting" component={SettingsScreen} options={navOptionHandler} />
+    <Stack.Navigator initialRouteName="Information">
+      <Stack.Screen name="Information" component={InformationScreen} options={navOptionHandler} />
     </Stack.Navigator>
   )
 }
@@ -87,10 +87,10 @@ function MyTabs() {
             iconName = focused
               ? require('./src/images/home-2.png')
               : require('./src/images/home.png');
-          } else if (route.name === 'Settings') {
+          } else if (route.name === 'Information') {
             iconName = focused ?
-              require('./src/images/settings-2.png') :
-              require('./src/images/settings.png');
+              require('./src/images/information1.png') :
+              require('./src/images/information.png');
           }
 
           // You can return any component that you like here!
@@ -103,12 +103,12 @@ function MyTabs() {
         activeTintColor: 'tomato',
         inactiveTintColor: 'gray',
         style: {
-          backgroundColor: 'rgba(4,47,89,0.5)',
+          backgroundColor: 'rgba(0,0,0,0.5)',
         }
       }}
     >
       <Tab.Screen name="Home" component={HomeStack} />
-      <Tab.Screen name="Settings" component={SettingStack} />
+      <Tab.Screen name="Information" component={InformationStack} />
     </Tab.Navigator>
   );
 }
