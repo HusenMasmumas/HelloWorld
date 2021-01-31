@@ -3,7 +3,7 @@ import { SafeAreaView, Text, View, Image, ImageBackground } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack'
-import BoldAndBeautiful from './App7';
+import BoldAndBeautiful from './information';
 import Home from './Home';
 
 
